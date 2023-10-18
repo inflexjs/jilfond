@@ -1,24 +1,15 @@
-# jilfond
+# jilfond - тестовое задание
 
-## Project setup
+В самом api от jsonplaceholder не оказалось аватара и описания пользователя :(  
+Так же не совсем понял насчёт поиска по id и username. При одновременной передачи id и username поиск происходит в рамках одного юзера с этими значениями. Как итог: либо поиск по id, либо по username.  
+Так же максимальная выдача - 10 пользователей. Даже с `users?_start=1&_end=50`.  
+Возможно это старое ТЗ и оно не переписывалось.
+
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
