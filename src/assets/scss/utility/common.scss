@@ -1,0 +1,147 @@
+body,
+button,
+input,
+textarea,
+.button {
+    font-family: $fontFamily;
+}
+
+body {
+	font-size: 14px;
+  letter-spacing: 0.01em;
+	color: $secondaryColor;
+	background-color: $mainBackground;
+	backface-visibility: hidden;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  overflow-x: hidden;
+  overflow-y: auto;
+	min-width: 320px;
+}
+
+@media (hover: hover) {
+    /* width */
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 4px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background-color: $shadowDarkColor;
+        border-radius: 4px;
+    }
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+    box-sizing: border-box;
+    padding-left: $containerPaddingMobile;
+    padding-right: $containerPaddingMobile;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+        padding-left: $containerPaddingTablet;
+        padding-right: $containerPaddingTablet;
+    }
+
+    @media (min-width: $tabletLate) {
+        padding-left: $containerPaddingTabletLate;
+        padding-right: $containerPaddingTabletLate;
+    }
+
+    @media (min-width: $desktop) {
+        max-width: $containerMaxWidth;
+        padding-left: $containerPaddingDesktop;
+        padding-right: $containerPaddingDesktop;
+    }
+}
+
+main {
+    display: block;
+}
+
+.template {
+  padding-top: 100px;
+
+  @media (min-width: 650px) {
+    padding-top: 140px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 160px;
+  }
+}
+
+.button,
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    display: block;
+}
+
+input,
+textarea {
+    appearance: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    &::placeholder {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+    }
+
+    &:-webkit-autofill {
+        background-clip: text;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+[data-src] {
+    transition: opacity 0.3s ease;
+}
+
+.lazyload {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.lazyloaded {
+    opacity: 1;
+}

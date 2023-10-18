@@ -1,0 +1,21 @@
+$containerMaxWidth: 1266px;
+
+$containerPaddingMobile: 20px;
+$containerPaddingTablet: 40px;
+$containerPaddingTabletLate: $containerPaddingTablet;
+$containerPaddingDesktop: 20px;
+
+$shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+$shadowHard: 0 20px 25px rgba(0, 0, 0, 0.1);
+$shadowEasy: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+$menuZIndex: 2;
+$headerZIndex: 3;
+
+$cardBorderRadius: 5px;
+$tagBorderRadius: 100px;
+
+$tagBorderStyle: 1px solid #A02842;
+$menuBorderStyle: 1px solid #dcdcdc;
+$inputBorderStyle: 1px solid #E4E5E6;;
+$searchedTagBorderStyle: 1px solid #A8A9AA;
