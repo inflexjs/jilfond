@@ -8,7 +8,6 @@
 				:disabled="isLoading"
 				placeholder="Введите Id или имя"
 				@onenter="onSearch"
-				@blur="onSearch"
 			/>
 		</div>
 		<div class="employee-aside__field employee-aside__field--grow">
@@ -69,14 +68,11 @@ export default {
 				let subject = item.trim()
 				if (!subject) return ''
 				
-				subject = subject.match(numberPattern) ? parseInt(subject) : subject
+				subject = subject.match(numberPattern)
+					? `id=${subject}`
+					: `username=${subject}`
 
-				switch (typeof subject) {
-					case "number":
-						return `id=${subject}`
-					case "string":
-						return `username=${subject}`
-				}
+				return subject
 			}).join('&')
 		},
 		onSearch(value) {
